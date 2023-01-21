@@ -21,14 +21,11 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "15cfef61-4175-4c2b-80d9-6bdc3276ce41"
+				"spark.autotune.trackingId": "4bd9faf0-90c0-4869-ad57-fdfbc412a532"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
@@ -44,14 +41,13 @@
 				"endpoint": "https://gdat-oea-uat-syn.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/spark3p1sm",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.1",
 				"nodeCount": 3,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -78,7 +74,8 @@
 				},
 				"source": [
 					"%run /Xporter_py"
-				]
+				],
+				"execution_count": 2
 			},
 			{
 				"cell_type": "code",
@@ -96,7 +93,8 @@
 				"source": [
 					"oea = OEA()\r\n",
 					"xporter = Xporter()"
-				]
+				],
+				"execution_count": 3
 			},
 			{
 				"cell_type": "code",
@@ -113,7 +111,8 @@
 				},
 				"source": [
 					"xporter._prepare_schoolinfo()"
-				]
+				],
+				"execution_count": 4
 			},
 			{
 				"cell_type": "code",
@@ -130,7 +129,8 @@
 				},
 				"source": [
 					"xporter.ingest_schoolinfo()"
-				]
+				],
+				"execution_count": 5
 			},
 			{
 				"cell_type": "code",
@@ -147,7 +147,8 @@
 				},
 				"source": [
 					"xporter.ingest_schoolinfo_stage3()"
-				]
+				],
+				"execution_count": 6
 			}
 		]
 	}
