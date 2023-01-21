@@ -18,14 +18,11 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "a7a7656a-d800-41d3-be3b-58b85291d320"
+				"spark.autotune.trackingId": "f34c065e-4352-4980-bffb-8b811a6a54dc"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
 			"kernelspec": {
 				"name": "synapse_pyspark",
@@ -41,14 +38,13 @@
 				"endpoint": "https://gdat-oea-uat-syn.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/spark3p1sm",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.1",
 				"nodeCount": 3,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -88,6 +84,7 @@
 					"                                        ['SchoolLogoUrl', 'string', 'no-op'],\r\n",
 					"                                        ['Telephone', 'string', 'no-op'],\r\n",
 					"                                        ['Web', 'string', 'no-op'],\r\n",
+					"                                        ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                        ['SchoolID', 'string', 'partition_by'],\r\n",
 					"                                        ['Address', 'string', 'no-op']]\r\n",
 					"\r\n",
@@ -188,6 +185,7 @@
 					"                                        ['YearGroupId', 'string', 'no-op'],\r\n",
 					"                                        ['YearTaughtIn', 'string', 'no-op'],\r\n",
 					"                                        ['formerUPN', 'string', 'no-op'],\r\n",
+					"                                        ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                        ['SchoolID', 'string', 'partition_by'],\r\n",
 					"                                        ['AddressBlock', 'string', 'no-op']\r\n",
 					"                                        ] \r\n",
@@ -208,6 +206,7 @@
 					"                                            ['NumLateMarks', 'string', 'no-op'],\r\n",
 					"                                            ['NumLateBeforeRegMarks', 'string', 'no-op'],\r\n",
 					"                                            ['Marks', 'string', 'mask'],\r\n",
+					"                                            ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                            ['SchoolID', 'string', 'partition_by']] \r\n",
 					"\r\n",
 					"        self.schemas['groups'] = [['Code', 'string', 'no-op'],\r\n",
@@ -223,6 +222,7 @@
 					"                                ['Staff', 'string', 'no-op'],\r\n",
 					"                                ['Type', 'string', 'no-op'],\r\n",
 					"                                ['XID', 'string', 'no-op'],\r\n",
+					"                                ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                ['SchoolID', 'string', 'partition_by']] \r\n",
 					"\r\n",
 					"        self.schemas['HistoricalAttendanceSummary'] = [['EndDate', 'string', 'no-op'],\r\n",
@@ -230,6 +230,7 @@
 					"                                                ['SchoolYear', 'string', 'no-op'],\r\n",
 					"                                                ['StartDate', 'string', 'no-op'],\r\n",
 					"                                                ['StudentId', 'string', 'mask'],\r\n",
+					"                                                ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                                ['SchoolID', 'string', 'partition_by'],\r\n",
 					"                                                ['Marks', 'string', 'no-op']]\r\n",
 					"\r\n",
@@ -278,6 +279,7 @@
 					"                                [\"WorkEmail\", 'string', 'no-op'],\r\n",
 					"                                [\"WorkPhone\", \"string\", 'no-op'],\r\n",
 					"                                [\"XID\", \"string\", 'no-op'],\r\n",
+					"                                ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                ['SchoolID', 'string', 'partition_by'],\r\n",
 					"                                [\"AddressBlock\",'string', 'no-op']]\r\n",
 					"\r\n",
@@ -293,6 +295,7 @@
 					"                                        ['StudentExternalId', 'string', 'no-op'],\r\n",
 					"                                        ['StudentId', 'string', 'no-op'],\r\n",
 					"                                        ['StudentIdaasId', 'string', 'no-op'],\r\n",
+					"                                        ['SchoolKey', 'string', 'no-op'],\r\n",
 					"                                        ['SchoolID', 'string', 'partition_by']]\r\n",
 					"                                        \r\n",
 					" \r\n",
