@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "gdat-oea-uat-syn"
+		},
+		"LS_Azure_SQL_DB_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=@{linkedService().dbServer};Initial Catalog=@{linkedService().dbName};User ID=@{linkedService().userName}"
+		},
+		"LS_SQL_Serverless_OEA_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=gdat-oea-uat-syn-ondemand.sql.azuresynapse.net;Initial Catalog=@{linkedService().dbName}"
+		},
+		"gdat-oea-uat-syn-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:gdat-oea-uat-syn.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"LS_ADLS_OEA_properties_typeProperties_url": {
+			"value": "https://gdatoeauatsa.dfs.core.windows.net"
+		},
+		"LS_HTTP_properties_typeProperties_url": {
+			"value": "@{linkedService().baseURL}"
+		},
+		"LS_KeyVault_OEA_properties_typeProperties_baseUrl": {
+			"value": "https://gdat-oea-uat-kv.vault.azure.net/"
+		},
+		"gdat-oea-uat-syn-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://gdatoeauatsa.dfs.core.windows.net"
+		}
+	}
+}
