@@ -1,0 +1,595 @@
+{
+	"name": "Ingest_schoolinfo",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "spark3p2sm",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "b724aeac-0d73-4cb5-987f-53eba9f8dcd8"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"79db1801-3bb0-40b3-86b0-1c3fb6ca3741": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "2022",
+										"1": "823PSCO2999",
+										"2": "school@we.com",
+										"3": "3281101",
+										"5": "Community",
+										"6": "Gillian Grosvenor",
+										"7": "1",
+										"8": "2018-11-06T17:45:59.131",
+										"9": "Mrs G Grosvenor",
+										"10": "WATERS EDGE PRIMARY SCHOOL",
+										"11": "Primary",
+										"12": "94DCB537A728268535BBD3CBA1C5A32D410C9704",
+										"15": "852015",
+										"17": "94DCB537A728268535BBD3CBA1C5A32D410C9704",
+										"18": "3281101",
+										"19": "3281101",
+										"20": "2023-01-27 07:09:04"
+									},
+									{
+										"0": "2022",
+										"1": "823SSCO4321",
+										"2": "office@ga.org.uk",
+										"3": "3281102",
+										"4": "95137",
+										"5": "Community",
+										"6": "Adrian Blacker",
+										"7": "1",
+										"8": "2020-03-06T01:47:23.038",
+										"9": "Mr Adrian Blacker",
+										"10": "Green Abbey School",
+										"11": "Secondary",
+										"12": "2C63E754EE5AE375ECB0B58B5974675EB5ACE121",
+										"15": "851234",
+										"17": "2C63E754EE5AE375ECB0B58B5974675EB5ACE121",
+										"18": "3281102",
+										"19": "3281102",
+										"20": "2023-01-27 07:09:04"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "CurrentAcademicYear",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "DeniNo",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "Email",
+										"type": "string"
+									},
+									{
+										"key": "3",
+										"name": "EstabId",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "ExamCentre",
+										"type": "string"
+									},
+									{
+										"key": "5",
+										"name": "Governance",
+										"type": "string"
+									},
+									{
+										"key": "6",
+										"name": "Head",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "Id",
+										"type": "string"
+									},
+									{
+										"key": "8",
+										"name": "LastUpdated",
+										"type": "string"
+									},
+									{
+										"key": "9",
+										"name": "MainContact",
+										"type": "string"
+									},
+									{
+										"key": "10",
+										"name": "Name",
+										"type": "string"
+									},
+									{
+										"key": "11",
+										"name": "Phase",
+										"type": "string"
+									},
+									{
+										"key": "12",
+										"name": "RowHash",
+										"type": "string"
+									},
+									{
+										"key": "13",
+										"name": "SchoolLogoAlternateUrl",
+										"type": "string"
+									},
+									{
+										"key": "14",
+										"name": "SchoolLogoUrl",
+										"type": "string"
+									},
+									{
+										"key": "15",
+										"name": "Telephone",
+										"type": "string"
+									},
+									{
+										"key": "16",
+										"name": "Web",
+										"type": "string"
+									},
+									{
+										"key": "17",
+										"name": "Address",
+										"type": "string"
+									},
+									{
+										"key": "18",
+										"name": "SchoolID",
+										"type": "string"
+									},
+									{
+										"key": "19",
+										"name": "SchoolKey",
+										"type": "string"
+									},
+									{
+										"key": "20",
+										"name": "rundate",
+										"type": "timestamp"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"244ea705-3e1a-4ddb-b413-d7eeb7de3086": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "2022",
+										"1": "823PSCO2999",
+										"2": "school@we.com",
+										"3": "3281101",
+										"5": "Community",
+										"6": "Gillian Grosvenor",
+										"7": "1",
+										"8": "2018-11-06T17:45:59.131",
+										"9": "Mrs G Grosvenor",
+										"10": "WATERS EDGE PRIMARY SCHOOL",
+										"11": "Primary",
+										"12": "94DCB537A728268535BBD3CBA1C5A32D410C9704",
+										"15": "852015",
+										"17": "94DCB537A728268535BBD3CBA1C5A32D410C9704",
+										"18": "3281101",
+										"19": "3281101",
+										"20": "2023-01-27 07:09:04"
+									},
+									{
+										"0": "2022",
+										"1": "823SSCO4321",
+										"2": "office@ga.org.uk",
+										"3": "3281102",
+										"4": "95137",
+										"5": "Community",
+										"6": "Adrian Blacker",
+										"7": "1",
+										"8": "2020-03-06T01:47:23.038",
+										"9": "Mr Adrian Blacker",
+										"10": "Green Abbey School",
+										"11": "Secondary",
+										"12": "2C63E754EE5AE375ECB0B58B5974675EB5ACE121",
+										"15": "851234",
+										"17": "2C63E754EE5AE375ECB0B58B5974675EB5ACE121",
+										"18": "3281102",
+										"19": "3281102",
+										"20": "2023-01-27 07:09:04"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "CurrentAcademicYear",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "DeniNo",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "Email",
+										"type": "string"
+									},
+									{
+										"key": "3",
+										"name": "EstabId",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "ExamCentre",
+										"type": "string"
+									},
+									{
+										"key": "5",
+										"name": "Governance",
+										"type": "string"
+									},
+									{
+										"key": "6",
+										"name": "Head",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "Id",
+										"type": "string"
+									},
+									{
+										"key": "8",
+										"name": "LastUpdated",
+										"type": "string"
+									},
+									{
+										"key": "9",
+										"name": "MainContact",
+										"type": "string"
+									},
+									{
+										"key": "10",
+										"name": "Name",
+										"type": "string"
+									},
+									{
+										"key": "11",
+										"name": "Phase",
+										"type": "string"
+									},
+									{
+										"key": "12",
+										"name": "RowHash",
+										"type": "string"
+									},
+									{
+										"key": "13",
+										"name": "SchoolLogoAlternateUrl",
+										"type": "string"
+									},
+									{
+										"key": "14",
+										"name": "SchoolLogoUrl",
+										"type": "string"
+									},
+									{
+										"key": "15",
+										"name": "Telephone",
+										"type": "string"
+									},
+									{
+										"key": "16",
+										"name": "Web",
+										"type": "string"
+									},
+									{
+										"key": "17",
+										"name": "Address",
+										"type": "string"
+									},
+									{
+										"key": "18",
+										"name": "SchoolID",
+										"type": "string"
+									},
+									{
+										"key": "19",
+										"name": "SchoolKey",
+										"type": "string"
+									},
+									{
+										"key": "20",
+										"name": "rundate",
+										"type": "timestamp"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"4df473a5-5c85-4591-b0c5-6781020cd07c": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "94DCB537A728268535BBD3CBA1C5A32D410C9704",
+										"1": "3281101",
+										"2": "2023-01-27 07:09:04",
+										"3": "0fe02b2636b949a6ee086f384f1da808abb6291b08037953dd7b704a04cfb6b9"
+									},
+									{
+										"0": "2C63E754EE5AE375ECB0B58B5974675EB5ACE121",
+										"1": "3281102",
+										"2": "2023-01-27 07:09:04",
+										"3": "488aee6ddbbfe083228f75f6526eb408b60c7178edf974d705cce5d931aba8ed"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "RowHash",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "SchoolID",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "rundate",
+										"type": "timestamp"
+									},
+									{
+										"key": "3",
+										"name": "SchoolID_pseudonym",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/79a9a1b8-17c9-4098-bbae-16c21b7edd2a/resourceGroups/rg-oea-cbuk07/providers/Microsoft.Synapse/workspaces/syn-oea-cbuk07/bigDataPools/spark3p2sm",
+				"name": "spark3p2sm",
+				"type": "Spark",
+				"endpoint": "https://syn-oea-cbuk07.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/spark3p2sm",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.2",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"%run /OEA_py"
+				],
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"%run /Xporter_py"
+				],
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"oea = OEA()\r\n",
+					"xporter = Xporter()"
+				],
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"#remove existing datasets and folders\r\n",
+					"spark.sql(\"DROP DATABASE IF EXISTS ldb_prod_s2r_xporter CASCADE\")\r\n",
+					"spark.sql(\"DROP DATABASE IF EXISTS ldb_prod_s2i_xporter CASCADE\")\r\n",
+					"oea.rm_if_exists(\"stage1/Transactional/xporter\")\r\n",
+					"oea.rm_if_exists(\"stage2/Ingested/xporter\")\r\n",
+					"oea.rm_if_exists(\"stage2/Refined/xporter\")\r\n",
+					"\r\n",
+					"#oea.rm_if_exists(f\"stage3/xporter/*\")"
+				],
+				"execution_count": 7
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"xporter._prepare_schoolinfo()"
+				],
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"xporter.ingest_schoolinfo()"
+				],
+				"execution_count": 9
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"xporter.ingest_schoolinfo_stage3('ldb_prod_s2i_xporter','ldb_prod_s2r_xporter')"
+				],
+				"execution_count": 10
+			}
+		]
+	}
+}
